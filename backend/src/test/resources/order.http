@@ -1,0 +1,53 @@
+### Create a new order
+POST http://localhost:8080/api/orders
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzNjY1MSwiZXhwIjoxNzQ4NzIzMDUxfQ.TADGwSOxtgvAbi1GcRjk0iDphr_89IOlv7-578-cVn7m1dGHX_vl7oz-HzhUZHPi4eWL0N1mOS_fZdag3dO3NQ
+Content-Type: application/json
+
+{
+  "user": {
+    "id": 1
+  },
+  "totalPrice": 100.50,
+  "orderItems": [
+    {
+      "product": {
+        "id": 1
+      },
+      "quantity": 2,
+      "price": 50.25
+    }
+  ]
+}
+
+### Get all orders
+GET http://localhost:8080/api/orders
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzNTUxMSwiZXhwIjoxNzQ4NzIxOTExfQ.t25V932V-1OvyBYa6_PzPs6DHwySNDaEOxGceV3b9eoCB042xV71JWoVKYP6BpZoSAtjQwiPCpmuGHVIX0vKVA
+
+### Get order by ID
+GET http://localhost:8080/api/orders/1
+Authorization: Bearer <paste_token_here>
+
+### Delete order
+DELETE http://localhost:8080/api/orders/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzNTUxMSwiZXhwIjoxNzQ4NzIxOTExfQ.t25V932V-1OvyBYa6_PzPs6DHwySNDaEOxGceV3b9eoCB042xV71JWoVKYP6BpZoSAtjQwiPCpmuGHVIX0vKVA
+
+### Update order
+PUT http://localhost:8080/api/orders/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzNjY1MSwiZXhwIjoxNzQ4NzIzMDUxfQ.TADGwSOxtgvAbi1GcRjk0iDphr_89IOlv7-578-cVn7m1dGHX_vl7oz-HzhUZHPi4eWL0N1mOS_fZdag3dO3NQ
+Content-Type: application/json
+
+{
+  "user": {
+    "id": 1
+  },
+  "totalPrice": 120.75,
+  "orderItems": [
+    {
+      "product": {
+        "id": 1
+      },
+      "quantity": 3,
+      "price": 40.25
+    }
+  ]
+}

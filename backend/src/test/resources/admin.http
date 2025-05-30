@@ -1,0 +1,11 @@
+### Get all users
+GET http://localhost:8080/api/admin/users
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzODQyNywiZXhwIjoxNzQ4NzI0ODI3fQ.mFRIBJArjWO0i1YErM7jYlk46HHHB2N933Ms56_4aviZVE-3pf1N-5zgTTM0JTRbnWnclsFNXqsTdGbetdq_Qg
+
+### Update user role
+PUT http://localhost:8080/api/admin/users/1/role?roleName=ADMIN
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzODQyNywiZXhwIjoxNzQ4NzI0ODI3fQ.mFRIBJArjWO0i1YErM7jYlk46HHHB2N933Ms56_4aviZVE-3pf1N-5zgTTM0JTRbnWnclsFNXqsTdGbetdq_Qg
+
+### Delete user
+DELETE http://localhost:8080/api/admin/users/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzOTAzMSwiZXhwIjoxNzQ4NzI1NDMxfQ.cJWVs9lB8oOKMlwGUFToN4dWVmJN-JgWn7jjmGDfwSbr7KdaZfFNFQkCEV7MIALbkNaA1vzCH6W7DVWg9jwgew

@@ -1,0 +1,49 @@
+### Create a new user
+POST http://localhost:8080/api/users
+Authorization: Bearer <paste_token_here>
+Content-Type: application/json
+
+{
+  "username": "new_user",
+  "email": "new_user@example.com",
+  "password": "password123",
+  "role": {
+    "name": "USER"
+  }
+}
+
+### Register a new user
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "username": "sonmene",
+  "email": "new_user@example.com",
+  "password": "password123"
+}
+
+### Get all users
+GET http://localhost:8080/api/users
+Authorization: Bearer <paste_token_here>
+
+### Get user by ID
+GET http://localhost:8080/api/users/1
+Authorization: Bearer <paste_token_here>
+
+### Update user
+PUT http://localhost:8080/api/users/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzNDEzMCwiZXhwIjoxNzQ4NzIwNTMwfQ.vB1SUs7MiuGqOtnnbZxu7KHPEnUSIVOIRYwgRhR6rtiMZbP7gw7pM7lVci3LO2QL1r8Gw4mWHzfBQZMUUYMRjQ
+Content-Type: application/json
+
+{
+  "username": "kaa",
+  "email": "updated_user@example.com",
+  "password": "newpassword123",
+  "role": {
+    "name": "ADMIN"
+  }
+}
+
+### Delete user
+DELETE http://localhost:8080/api/users/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTc0ODYzNDEzMCwiZXhwIjoxNzQ4NzIwNTMwfQ.vB1SUs7MiuGqOtnnbZxu7KHPEnUSIVOIRYwgRhR6rtiMZbP7gw7pM7lVci3LO2QL1r8Gw4mWHzfBQZMUUYMRjQ
